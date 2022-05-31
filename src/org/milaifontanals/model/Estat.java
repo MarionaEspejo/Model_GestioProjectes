@@ -4,6 +4,9 @@ import java.io.Serializable;
 
 public class Estat implements Serializable {
 
+    public int id;
+    public String nom;
+
     protected Estat() {
 
     }
@@ -23,9 +26,6 @@ public class Estat implements Serializable {
     public String getNom() {
         return nom;
     }
-
-    private int id;
-    private String nom;
     /*PROGRAMADOR,
     ANALISTA,
     CLIENT*/
