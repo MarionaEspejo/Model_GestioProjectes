@@ -170,7 +170,7 @@ public class Usuari implements Serializable {
      * contrasenya superior a 30 caracters
      */
     public void setHashPasswd(String newHashPasswd) {
-        if (newHashPasswd == null || newHashPasswd.length() > 30) {
+        if (newHashPasswd == null || newHashPasswd.length() > 250) {
             throw new RuntimeException("El hash de la password de l'usuari, no pot superar els 30 caracters");
         }
         this.passwordHash = newHashPasswd;

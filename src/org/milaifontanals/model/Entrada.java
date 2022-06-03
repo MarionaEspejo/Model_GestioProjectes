@@ -4,8 +4,9 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * Classe per gestionar entrades (logs) (numero, data, entrada, nouEsta, escriptor, novaAssignacio).
- * numero, data, entrada, escriptor obligatoris. La resta, optatius.
+ * Classe per gestionar entrades (logs) (numero, data, entrada, nouEsta,
+ * escriptor, novaAssignacio). numero, data, entrada, escriptor obligatoris. La
+ * resta, optatius.
  */
 public class Entrada implements Serializable {
 
@@ -55,8 +56,8 @@ public class Entrada implements Serializable {
      * Canvia el numero d'entrada
      *
      * @param newNumero: Nou numero de l'entrada
-     * @throw El programa donarà error si s'intenta introduir un numero negatiu o
-     * superior a 9999
+     * @throw El programa donarà error si s'intenta introduir un numero negatiu
+     * o superior a 9999
      */
     public void setNumero(int newNumero) {
         if (newNumero < 0 || newNumero > 9999) {
@@ -149,7 +150,6 @@ public class Entrada implements Serializable {
         return novaAssignacio;
     }
 
-    
     //TOOODOO
     /**
      * Metode toString En cas de tenir descripcio i alguna entrada, pot

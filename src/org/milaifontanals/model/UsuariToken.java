@@ -15,12 +15,15 @@ public class UsuariToken implements Serializable{
         
     }
     
+    private int ID;
     private String login;
     private String passwordHash;
     private String token;
+
     
     
-    public UsuariToken(String login, String passwordHash) {
+    public UsuariToken(int ID, String login, String passwordHash) {
+        this.ID = ID;
         this.login = login;
         this.passwordHash = passwordHash;
         //this.token = token;
@@ -31,6 +34,11 @@ public class UsuariToken implements Serializable{
     public void setLogin(String login) {
         this.login = login;
     }
+    
+    public void setID(int id) {
+        this.ID = id;
+    }
+
 
     public void setPasswordHash(String passwordHash) {
         this.passwordHash = passwordHash;
@@ -50,6 +58,15 @@ public class UsuariToken implements Serializable{
 
     public String getToken() {
         return token;
+    }
+    
+        public int getId() {
+        return ID;
+    }
+
+    @Override
+    public String toString() {
+        return "UsuariToken{" + "ID=" + ID + ", login=" + login + ", passwordHash=" + passwordHash + ", token=" + token + '}';
     }
     
        

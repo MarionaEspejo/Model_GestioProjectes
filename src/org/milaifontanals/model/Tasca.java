@@ -1,6 +1,7 @@
 package org.milaifontanals.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -17,7 +18,7 @@ public class Tasca implements Serializable {
     private String descripcio;
     private Date dataLimit;
     private Estat estat;
-    private List<Entrada> entrades;
+    private List<Entrada> entrades = new ArrayList<>();
     private Usuari propietari;
     private Usuari responsable;
 
@@ -52,6 +53,14 @@ public class Tasca implements Serializable {
         setPropietari(pPropietari);
         setResponsable(pResponsable);
         setEstat(pEstat);
+    }
+
+    public Tasca(int pId, Date pDataCreacio, String pNom, String pDescripcio, Usuari pPropietari) {
+        setId(pId);
+        setDataCreacio(pDataCreacio);
+        setNom(pNom);
+        setDesc(pDescripcio);
+        setPropietari(pPropietari);
     }
 
     /**
@@ -232,6 +241,10 @@ public class Tasca implements Serializable {
 
     public Usuari getResponsable() {
         return responsable;
+    }
+
+    public List<Entrada> getEntrades() {
+        return entrades;
     }
 
     //TOOODOO

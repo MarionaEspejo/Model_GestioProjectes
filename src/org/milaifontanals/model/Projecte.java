@@ -1,6 +1,7 @@
 package org.milaifontanals.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -13,7 +14,7 @@ public class Projecte implements Serializable {
     private String nom;
     private String descripcio;
     private Usuari capProjecte;
-    private List<Tasca> tasques;
+    private List<Tasca> tasques = new ArrayList<>();
     private List<ProjecteUsuariRol> usuaris;
 
     protected Projecte() {

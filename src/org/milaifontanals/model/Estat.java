@@ -11,6 +11,11 @@ public class Estat implements Serializable {
 
     }
 
+    public Estat(int id, String nom) {
+        this.id = id;
+        this.nom = nom;
+    }
+
     public int getId() {
         return id;
     }
